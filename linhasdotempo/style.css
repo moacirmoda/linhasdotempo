@@ -1,0 +1,457 @@
+/*
+Theme Name: Linhas do Tempo
+Theme URI: http://www.moacirmoda.com/
+Author: Moacir Moda
+Author URI: http://www.moacirmoda.com/
+Description: Tema correspondente ao projeto Linhas do Tempo da FioCruz
+Version: v0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: linhasdotempo, linhas do tempo, fiocruz, icict
+Text Domain: linhasdotempo
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@font-face {
+    font-family: "LinuxLibertine";
+    src: url("static/fonts/LinLibertine_R.woff") format('woff');
+}
+@font-face {
+    font-family: "LinuxLibertine";
+    src: url("static/fonts/LinLibertine_RB.woff") format('woff');
+    font-weight: bold;
+}
+
+body {
+	background-image: url(static/img/bg-container.jpg);
+	font-family: "LinuxLibertine", arial, serif;
+	font-size: 12pt;
+	color: #333;
+}
+a {
+	color: #666;
+	text-decoration: none;
+}
+a:hover { text-decoration: underline; }	
+.alignright { float: right; }
+.alignleft { float: left; }
+
+header, footer {
+	background-image: url(static/img/bg-header.jpg);
+}
+header .first {
+	padding: 10px 0;
+	margin: 0;
+}
+header .institucional-logos li {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+}
+header .main-logo img {
+	margin-top: 20px;
+}
+header .sub-logo img {
+	margin-top: 50px;
+}
+
+header #menu {
+	background-color: #cdb995;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+header #menu ul {
+	margin: 0 auto;
+}
+header #menu li {
+	display: inline-block;
+	list-style: none;
+	padding: 15px 0;
+}
+header #menu li > ul {
+	display: none;
+}
+header #menu li:hover { 
+	/*background-color: #a16f18;*/
+}
+header #menu li a {
+	color: #a16f18;
+	text-decoration: none;
+	padding: 5px 25px;
+	font-size: 13pt;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: -1px;
+	border-left: 1px solid #a16f18;
+	margin: 0;
+}
+header #menu li:first-child a {
+	border-left: none;
+}
+header #menu li a:hover {
+	color: #e6d7b8;
+	/*background-color: #a16f18;*/
+}
+
+header .search-bar {
+	background-color: #ededed;
+	padding: 10px 0;
+	text-align: center;
+}
+header input, header select {
+	margin: 5px;
+	width: 90%;
+	padding: 10px;
+	font-family: arial, serif;
+	font-size: 10pt;
+	color: #999;
+}
+
+article {
+	margin: 30px 0;
+}
+article .parent-box {
+	background-color: #db9f3d;
+	padding: 10px;
+	color: #fff;
+	margin-bottom: 30px;
+}
+article .parent-box a {
+	color: #fff;
+}
+article h1, article h2 {
+	margin: 0;
+	padding: 0;
+	letter-spacing: -1px;
+}
+article h2 {
+	color: #a16f18;
+	border-bottom: 1px solid #a16f18;
+	margin: 10px 0 20px 0;
+}
+article .date-box h2 {
+	margin: 0;	
+	padding: 0;
+}
+article .title-box {
+	margin: 0 0 10px 0;	
+}
+article .title-box h1 {
+	margin: 0;
+	padding: 0;
+}
+article.page .title-box h1 {
+	border-bottom: 1px solid #db9f3d;
+}
+article .title-box h1 a {
+	font-size: 30pt;
+	color: #db9f3d;
+}
+article .title-box h1 a:hover {
+	text-decoration: none;
+}
+article .temas-box ul, article .temas-box li {
+	margin: 0;
+	padding: 0;
+}
+article .temas-box li {
+	display: inline-block;
+	list-style: none;
+}
+article .temas-box li a {
+	background-color: #a16f18;
+	color: #fff;
+	margin: 0 2px;
+	text-transform: uppercase;
+	padding: 3px;
+	font-size: 9pt;
+	border-radius: 3px;
+}
+article .temas-box li a:first {
+	margin: 0;
+}
+article .temas-box li a:hover {
+	background-color: #db9f3d;
+	text-decoration: none;
+}
+article .article-content {
+	margin: 20px 0;
+	line-height: 22pt;
+}
+article .article-content .thumb {
+	margin: 0 0 5px 20px;
+}
+article .comentarios-box {
+	margin: 30px 0 0 0;
+}
+article .alert-box {
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+article .alert-box a {
+	padding: 5px;
+	text-decoration: none;
+	width: 100%;
+}
+article .alert-box a:hover {
+	color: #909090;
+}
+article .alert-box:hover {
+	background-color: #ccc;
+	border: 1px solid #999;
+}
+
+footer {
+	color: #fff;
+	padding: 30px;
+}
+footer h2, footer p {
+	margin: 0;
+	padding: 0;
+}
+footer h2 {
+	color: #db9f3d;
+}
+
+.search-results .box-title h1 {
+	padding: 10px 0 0 0;
+	margin: 0;
+	color: #db9f3d;
+	border-bottom: 1px solid #db9f3d;
+}
+.search-results article.search {
+	margin: 20px 0 30px 0;
+}
+.search-results .search a:hover {
+	color: #000;
+}
+.search-results .search a:hover h2 {
+	color: #db9f3d;
+}
+.search-results .search h2 {
+	font-size: 12pt;
+	color: #a16f18;
+	border-bottom: none;
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+.search-results .search h2 a {
+	color: #a16f18;
+}
+.search-results .search .content {
+	padding: 0;
+	margin: 0;
+}
+.search-results .search .content p {
+	margin: 0;
+	padding: 0;
+	font-size: 11pt;
+}
+.search-results .search h2 small {
+	padding: 0 5px;
+	margin: 0 5px 0 0;
+	background-color: #a16f18;
+	color: #fff;
+}
+
+.navigation h2 {
+	display: none;
+}
+.navigation {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0 20px 0;
+}
+.navigation a {
+
+}
+
+/*----------------
+	TIMELINE
+------------------*/
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 2px;
+  background: #cdb995;
+}
+@media only screen and (min-width: 1170px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block {
+    margin: -20px 0;
+  }
+  .cd-timeline-block.title {
+  	margin: 100px 0;
+  }
+  .cd-timeline-block.title:first-child {
+  	margin-top: -35px;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+/*.cd-timeline-block.title  {
+	margin-top: 60px;
+}*/
+.cd-timeline-img {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  left: 50%;
+  margin-left: -9px;
+  border-radius: 50%;
+  background-color: #db9f3d;
+}
+.cd-timeline-date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: 50%;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  margin-left: -75px;
+  text-align: center;
+  background-image: url(static/img/bg-container.jpg);
+  font-size: 45pt;
+  color: #db9f3d;
+}
+.cd-timeline-date.month {
+	font-size: 30pt;
+}
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #f0f0f0;
+}
+.cd-timeline-content {
+  position: relative;
+  margin-left: 30px;
+  margin-right: 30px;
+  background: #f0f0f0;
+  padding: 1em;
+}
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-timeline-content h2 {
+    font-size: 14pt;
+    padding: 10px 0 0 0;
+    margin: 0;
+    color: #a16f18;
+  }
+  .cd-timeline-content p {
+    font-size: 10pt;
+  }
+  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    width: 45.7%;
+  }
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #f0f0f0;
+  }
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    top: 6px;
+    font-size: 10pt;
+    color: #a16f18;
+    font-weight: bold;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #f0f0f0;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+}
+
+.cd-timeline-content:hover {
+	-webkit-animation: pulsate 0.3s ease-in-out;
+    -moz-animation: pulsate 0.3s ease-in-out;
+    -o-animation: pulsate 0.3s ease-in-out;
+    animation: pulsate 0.3s ease-in-out;
+	visibility: visible;
+}
+@-webkit-keyframes pulsate {
+  60% {
+    -webkit-transform: scale(1.02);
+  }
+ 
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+.cd-timeline-block a:hover {
+	text-decoration: none !important;
+	color: #666 !important; 
+}

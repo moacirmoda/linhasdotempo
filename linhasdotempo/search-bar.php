@@ -1,0 +1,53 @@
+<?php
+
+$years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE post_type = 'event' AND post_status = 'publish' GROUP BY year DESC" );
+
+?>
+
+<form action="<?php bloginfo('wpurl'); ?>" action='GET' id='formSearchBar'>
+	<input type='hidden' name='lt-year' id='formSearchBarYear' value=''>
+</form>
+
+<div class='search-bar'>
+	<div class='container-fluid'>
+		<div class='row'>
+			<div class='col-md-2 logo'>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" class='minilogo'>
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/logo-search.png" title="<?php bloginfo( 'name' ); ?>" width="100px" />
+				</a>
+			</div>
+			
+			<div class='col-md-6 search'>
+				<form action="<?php bloginfo('siteurl'); ?>" action="GET">
+				<input type="hidden" name="post_type" value="event" />
+					<input type="text" placeholder='Buscar' name='s'>
+				</form>
+			</div>
+			
+			<div class='col-md-2 visao'>
+				<select>
+					<option>Visão:</option>
+					<option>Ano</option>
+					<option>Década</option>
+					<option>Século</option>
+				</select>
+			</div>
+			<div class='col-md-2 ano'>
+				<select class='submit-on-change' data-form-name="formSearchBar" data-field-name='lt-year'>
+					<option value="">Ano:</option>
+					<?php foreach($years as $year): ?>
+						<?php if(isset($_REQUEST['lt-year']) and $_REQUEST['lt-year'] == $year->year): ?>
+							<option selected><?= $year->year; ?></option>
+						<?php else: ?>
+							<option ><?= $year->year; ?></option>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	
+</script>

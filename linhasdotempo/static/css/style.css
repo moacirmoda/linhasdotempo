@@ -1,0 +1,162 @@
+/*
+========================================================
+Linha do Tempo - FioCruz - v1
+========================================================
+data:		12/06/2015;
+criador:	Moacir Moda;
+contato:	moa.moda@gmail.com - moacirmoda.com;
+========================================================
+*/
+
+
+
+@font-face {
+    font-family: "LinuxLibertine";
+    src: url("../fonts/LinLibertine_R.woff") format('woff');
+}
+@font-face {
+    font-family: "LinuxLibertine";
+    src: url("../fonts/LinLibertine_RB.woff") format('woff');
+    font-weight: bold;
+}
+
+body {
+	background-image: url(../img/bg-container.jpg);
+	font-family: "LinuxLibertine", arial, serif;
+	font-size: 14pt;
+	color: #333;
+}
+a {
+	color: #666;
+	text-decoration: none;
+}
+a:hover { text-decoration: underline; }	
+
+header, footer {
+	background-image: url(../img/bg-header.jpg);
+}
+header .first {
+	padding: 30px 0;
+	margin: 0;
+}
+header .institucional-logos li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 10px;
+}
+header .main-logo img {
+	margin-top: 20px;
+}
+header .sub-logo img {
+	margin-top: 50px;
+}
+
+header .menu {
+	background-color: #cdb995;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+header .menu ul {
+	margin: 0 auto;
+}
+header .menu li {
+	display: inline-block;
+	list-style: none;
+	padding: 25px 0;
+}
+header .menu li a {
+	color: #a16f18;
+	text-decoration: none;
+	padding: 25px 20px;
+	font-size: 14pt;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+header .menu li a:hover {
+	color: #e6d7b8;
+}
+
+header .search-bar {
+	background-color: #ededed;
+	padding: 20px 0;
+}
+header input, header select {
+	margin: 5px;
+	width: 90%;
+	padding: 10px;
+	font-family: arial, serif;
+	font-size: 12pt;
+	color: #999;
+}
+
+article {
+	margin: 30px 0;
+}
+article .parent-box {
+	background-color: #db9f3d;
+	padding: 10px;
+	color: #fff;
+	margin-bottom: 30px;
+}
+article h1, article h2 {
+	margin: 0;
+	padding: 0;
+	letter-spacing: -1px;
+}
+article h2 {
+	color: #a16f18;
+}
+article .title-box {
+	margin: 0 0 10px 0;	
+}
+article .title-box h1 a {
+	font-size: 30pt;
+	color: #db9f3d;
+}
+article .title-box h1 a:hover {
+	text-decoration: none;
+}
+article .temas-box ul, article .temas-box li {
+	margin: 0;
+	padding: 0;
+}
+article .temas-box li {
+	display: inline-block;
+	list-style: none;
+}
+article .temas-box li a {
+	background-color: #a16f18;
+	color: #fff;
+	margin: 0 5px;
+	text-transform: uppercase;
+	padding: 5px;
+}
+article .temas-box li a:first {
+	margin: 0;
+}
+article .temas-box li a:hover {
+	background-color: #db9f3d;
+	text-decoration: none;
+}
+article .article-content {
+	margin: 20px 0;
+	line-height: 22pt;
+}
+article .article-content .thumb {
+	margin: 0 0 5px 20px;
+}
+
+footer {
+	color: #fff;
+	padding: 30px;
+}
+footer h2, footer p {
+	margin: 0;
+	padding: 0;
+}
+footer h2 {
+	color: #db9f3d;
+}
+
