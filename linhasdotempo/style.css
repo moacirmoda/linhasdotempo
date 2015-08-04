@@ -455,3 +455,23 @@ footer h2 {
 	text-decoration: none !important;
 	color: #666 !important; 
 }
+
+.advanced-search input, select {
+    line-height: 14pt;
+}
+.advanced-search .input-sm {
+    width: 100px;
+}
+.advanced-search #divBuscar {
+    margin: 20px 0;
+}
+.advanced-search .badge a {
+    color: #fff;
+    font-family: arial, serif;
+    font-weight: normal;
+}
+.btn-linha-do-tempo {
+    color: #fff;
+    background-color: #db9f3d;
+    border-color: #DB9F58;
+}
