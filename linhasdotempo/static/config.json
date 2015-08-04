@@ -1,0 +1,14 @@
+{
+  "vars": {},
+  "css": [
+    "print.less",
+    "grid.less",
+    "buttons.less",
+    "glyphicons.less",
+    "button-groups.less",
+    "labels.less",
+    "badges.less"
+  ],
+  "js": [],
+  "customizerUrl": "http://getbootstrap.com/customize/?id=10b46534e3cf83a23c8d"
+}
