@@ -6,17 +6,18 @@ global $query_string;
 $query = new WP_Query($query_string);
 
 if(isset($_GET['s']) and isset($_GET['type']) and $_GET['type'] == 'advanced') {
+	
 	$args = array(
 	    'post_type' => 'event', 
-	    'post_status'   => 'publish',
+	    'post_status' => 'publish',
 	);
 
 	$str_querypost = 'post_type=event';
 	
-	if(isset($_POST['periodo']) and is_array($_POST['periodo'])) {
+	if(isset($_REQUEST['periodo']) and is_array($_REQUEST['periodo'])) {
 		$args['date_query'] = array('relation' => 'OR');
 		
-		foreach($_POST['periodo'] as $periodo) {
+		foreach($_REQUEST['periodo'] as $periodo) {
 			list($from, $to) = explode('-', $periodo);
 			
 			// from
@@ -24,8 +25,8 @@ if(isset($_GET['s']) and isset($_GET['type']) and $_GET['type'] == 'advanced') {
 			$from_month = substr($from, 4, 5);
 
 			// to
-			$to_year = substr($to, 0, 4);  // retorna "abcde"
-			$to_month = substr($to, 4, 5);  // retorna "abcde"
+			$to_year = substr($to, 0, 4);
+			$to_month = substr($to, 4, 5);
 
 			// criando os args de período
 			$current_period_array = array(
@@ -41,14 +42,25 @@ if(isset($_GET['s']) and isset($_GET['type']) and $_GET['type'] == 'advanced') {
 			);
 
 			$args['date_query'][] = $current_period_array;
+		}
+	}
 
-			// print $to;
+	if(isset($_REQUEST['_tema']) and is_array($_REQUEST['_tema'])) {
+		
+		$args['tax_query'] = array();
+
+		foreach($_REQUEST['_tema'] as $tema) {
+
+			$current_tema_array = array(
+				'taxonomy' => 'tema',
+				'field'    => 'term_id',
+				'terms'    => array($tema),
+			);
+			$args['tax_query'][] = $current_tema_array;
 		}
 	}
 
 	$query = new WP_Query( $args );
-	// print_r($query);
-	// die;
 }
 
 get_header(); 
@@ -111,7 +123,7 @@ get_header();
 	<div class='container-fluid'>
 		<div class='row'>
 			<div class='col-md-12'>
-				<?php the_posts_pagination(); ?>
+				<?php // the_posts_pagination(); ?>
 			</div>
 		</div>
 	</div>

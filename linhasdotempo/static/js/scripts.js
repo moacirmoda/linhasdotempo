@@ -112,7 +112,7 @@ $(document).ready(function(){
 
 						var item = "<span class='badge badge-default'>";
 						var item = item + "Tema: "+tema.name+" <a href='#'>+</a>";
-						var item = item + "<input type='hidden' name='tema[]' value='"+tema.term_id+"'>";
+						var item = item + "<input type='hidden' name='_tema[]' value='"+tema.term_id+"'>";
 						var item = item + "</span>";
 
 						$("#divTemasBuscados").append(item);
