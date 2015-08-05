@@ -1,6 +1,7 @@
 <?php 
 
 global $post;
+$query = NULL;
 
 // busca de temas
 if(isset($_REQUEST['ajax']) and isset($_REQUEST['tema'])) {
@@ -15,27 +16,28 @@ if(isset($_REQUEST['ajax']) and isset($_REQUEST['tema'])) {
 
 $months = array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
 
-get_header(); 
-?>
+get_header(); ?>
 
+<article class='page advanced-search'>
+	<div class='container-fluid'>
 
-<?php while ( have_posts() ) : the_post(); ?>
-
-	<article class='page advanced-search'>
-		<div class='container-fluid'>
-
-			<div class='title-box'>
-				<div class='row'>
-					<div class='col-md-12'>
-						<h1><a href="<?= get_permalink(get_the_ID()); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-					</div>
+		<div class='title-box'>
+			<div class='row'>
+				<div class='col-md-12'>
+					<h1><a href="<?= get_permalink(get_the_ID()); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 				</div>
 			</div>
+		</div>
 
+		<?php if(!$query): ?>
 			<div class='article-content'>
 				<div class='row'>
 					<div class='col-md-12'>
-						<form id='formBuscaAvancada'>
+						<form id='formBuscaAvancada' method='GET' action='<?php bloginfo('wpurl'); ?>'>
+
+							<input type='hidden' name='s' value=''>
+							<input type='hidden' name='type' value='advanced'>
+							
 							<div id='divTermosDePesquisa'>
 								<span id='spanEmpty'><i>Não há condições selecionadas.</i></span>
 							</div>
@@ -87,30 +89,25 @@ get_header();
 
 							<img id='imgTemaLoading' src='<?php echo get_template_directory_uri(); ?>/static/img/ajax-loader.gif'>
 							<div id='divTemasBuscados'>
-								
-								<!-- <span class='badge badge-default'>
-									Dilma <a href="#" data-tema-id='1' data-tema-nome='Dilma'>+</a>
-								</span>
-								<span class='badge badge-default'>
-									Mais Médicos <a href="#" data-tema-id='2' data-tema-nome='Mais Médicos'>+</a>
-								</span>
-								<span class='badge badge-default'>
-									Sem Fronteiras <a href="#" data-tema-id='1' data-tema-nome='Sem Fronteiras'>+</a>
-								</span> -->
 								<span id='spanTemaEmpty'><i>Não foi localizado nenhum tema.</i></span>
 							</div>
 						</div>
-						
-
-						<?php the_content(); ?>
 					</div>
 				</div>
 			</div>
-			
+		<?php endif; ?>
+
+		<div class='article-content'>
+			<div class='row'>
+				<div class='col-md-12'>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; ?>
+				</div>
+			</div>
+		</div>
 		</div>
 	</article>
-
-<?php endwhile; ?>
 
 
 <?php get_footer(); ?>
