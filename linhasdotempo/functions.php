@@ -75,3 +75,16 @@ function linhasdotempo_hook_publish_time( $post_id ) {
 }
 
 add_action( 'save_post', 'linhasdotempo_hook_publish_time' );
+
+add_action('in_admin_footer', 'foot_monger');
+function foot_monger() { ?>
+
+	<script type='text/javascript'>
+		$ = jQuery;
+
+		// escondendo o item ordem
+		var order_input = $("#pageparentdiv #menu_order").closest('p');
+		order_input.prev('p').hide();
+		order_input.hide();
+    </script>
+<?php } 
