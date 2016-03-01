@@ -5,7 +5,8 @@ $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE
 ?>
 
 <form action="<?php bloginfo('wpurl'); ?>" action='GET' id='formSearchBar'>
-	<input type='hidden' name='lt-year' id='formSearchBarYear' value=''>
+	<input type='hidden' name='lt-year' id='formSearchBarYear' value='<?= $_REQUEST['lt-year']; ?>'>
+	<input type='hidden' name='lt-order' id='formSearchBarOrder' value='<?= $_REQUEST['lt-order']; ?>'>
 </form>
 
 <div class='search-bar'>
@@ -25,13 +26,12 @@ $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE
 			</div>
 			
 			<div class='col-md-2 visao'>
-				<select>
-					<option>Visão:</option>
-					<option>Ano</option>
-					<option>Década</option>
-					<option>Século</option>
+				<select class='submit-on-change' data-form-name="formSearchBar" data-field-name='lt-order'>
+					<option value='asc' <?php if($_REQUEST['lt-order'] != 'desc') echo 'selected="true"'; ?>>Ascendente</option>
+					<option value='desc' <?php if($_REQUEST['lt-order'] == 'desc') echo 'selected="true"'; ?>>Descendente</option>
 				</select>
 			</div>
+
 			<div class='col-md-2 ano'>
 				<select class='submit-on-change' data-form-name="formSearchBar" data-field-name='lt-year'>
 					<option value="">Ano:</option>

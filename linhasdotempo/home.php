@@ -9,11 +9,17 @@ $last_year = "";
 <section id="cd-timeline" class="cd-container">
 	<?php
 
-		$str_querypost = 'post_type=event&post_parent=0&posts_per_page=-1&orderby=date&order=asc';
+		$str_querypost = 'post_type=event&post_parent=0&posts_per_page=-1&orderby=date';
 		if(isset($_REQUEST['lt-year'])) {
 
 			$lt_year = (int)$_REQUEST['lt-year'];
 			$str_querypost .= "&year=" . $lt_year;
+		}
+
+		if(isset($_REQUEST['lt-order']) and $_REQUEST['lt-order'] == 'desc') {
+			$str_querypost .= "&order=desc";
+		} else {
+			$str_querypost .= "&order=asc";
 		}
 
 		// print $str_querypost;
