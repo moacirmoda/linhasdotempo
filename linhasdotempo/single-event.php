@@ -116,6 +116,31 @@ global $post;
 				</div>
 			<?php endif; ?>
 
+			<?php if(get_field('comentario')): ?>
+				<div class='comentarios-box'>
+					<div class='row'>
+						<div class='col-md-12'>
+							<h2>Comentários ao leitor</h2>
+							<?php the_field('comentario'); ?>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
+
+			<?php if(get_field('projeto')): ?>
+				<div class='comentarios-box'>
+					<div class='row'>
+						<div class='col-md-12'>
+							<h2>Projeto</h2>
+							<?php the_field('projeto'); ?>
+							<?php if(get_field('sub_projeto')): ?>
+								/ <?php the_field('sub_projeto'); ?>
+							<?php endif; ?>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
+
 			<div class='alert-box'>
 				<div class='row'>
 					<div class='col-md-12'>
