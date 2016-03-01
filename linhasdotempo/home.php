@@ -9,7 +9,7 @@ $last_year = "";
 <section id="cd-timeline" class="cd-container">
 	<?php
 
-		$str_querypost = 'post_type=event&post_parent=0';
+		$str_querypost = 'post_type=event&post_parent=0&posts_per_page=-1&orderby=date&order=asc';
 		if(isset($_REQUEST['lt-year'])) {
 
 			$lt_year = (int)$_REQUEST['lt-year'];
