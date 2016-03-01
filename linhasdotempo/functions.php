@@ -1,5 +1,8 @@
 <?php
 
+define( 'WPCF7_ADMIN_READ_CAPABILITY', 'manage_options' );
+define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'manage_options' );
+
 $MONTHS = array('', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
 
 // sidebars
@@ -86,5 +89,9 @@ function foot_monger() { ?>
 		var order_input = $("#pageparentdiv #menu_order").closest('p');
 		order_input.prev('p').hide();
 		order_input.hide();
+
+		// escondendo ítens não utilizados no painel
+		$("#menu-posts").hide();
+		$("#menu-comments").hide();
     </script>
 <?php } 
