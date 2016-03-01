@@ -358,11 +358,13 @@ footer h2 {
   margin-left: -75px;
   text-align: center;
   background-image: url(static/img/bg-container.jpg);
-  font-size: 45pt;
+  font-size: 30pt;
   color: #db9f3d;
+  font-weight: bold;
 }
 .cd-timeline-date.month {
-	font-size: 30pt;
+	font-size: 18pt;
+  font-weight: bold;
 }
 .cd-timeline-content::before {
   content: '';
