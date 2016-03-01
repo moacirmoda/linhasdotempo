@@ -25,16 +25,28 @@
 			<div class='container-fluid'>
 				<div class='row first'>
 					<div class='col-md-3'>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='main-logo' title="<?php bloginfo( 'name' ); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/logo-header.png" title="<?php bloginfo( 'name' ); ?>" width='70%' /></a>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='main-logo' title="<?php bloginfo( 'name' ); ?>">
+							<img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/logo-header.png" title="<?php bloginfo( 'name' ); ?>" width='40%' />
+						</a>
 					</div>
 					<div class='col-md-3'>
-						<a href="#" class='sub-logo' title="<?php bloginfo( 'description' ); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/sublogo-header.png" title="<?php bloginfo( 'description' ); ?>" width='70%'/></a>
+						<a href="#" class='sub-logo' title="<?php bloginfo( 'description' ); ?>">
+							<img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/sublogo-header.png" title="<?php bloginfo( 'description' ); ?>" width='70%'/>
+						</a>
 					</div>
 					<div class='col-md-3'></div>
 					<div class='col-md-3'>
 						<ul class='institucional-logos'>
-							<li><a href="#" title="Fundação Oswaldo Cruz"><img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/fiocruz-logo.png" title="Fundação Oswaldo Cruz" width='70%' /></a></li>
-							<li><a href="#" title="Fundação Oswaldo Cruz"><img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/bvslogo.png" title="Fundação Oswaldo Cruz" width='70%' /></a></li>
+							<li>
+								<a href="http://www.coc.fiocruz.br/" title="Fundação Oswaldo Cruz" target="_blank">
+									<img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/fiocruz-logo.png" title="Fundação Oswaldo Cruz" width='40%' />
+								</a>
+							</li>
+							<li>
+								<a href="http://bvsalud.org/" title="Biblioteca Virtual em Saúde" target="_blank">
+									<img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/bvslogo.png" title="Biblioteca Virtual em Saúde" width='40%' />
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>

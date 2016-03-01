@@ -42,7 +42,7 @@ header, footer {
 	background-image: url(static/img/bg-header.jpg);
 }
 header .first {
-	padding: 10px 0;
+	/*padding: 10px 0;*/
 	margin: 0;
 }
 header .institucional-logos li {
@@ -54,7 +54,7 @@ header .main-logo img {
 	margin-top: 20px;
 }
 header .sub-logo img {
-	margin-top: 50px;
+	margin-top: 22px;
 }
 
 header #menu {
