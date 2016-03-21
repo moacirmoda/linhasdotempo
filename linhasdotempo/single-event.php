@@ -49,9 +49,10 @@ global $post;
 				<div class='row'>
 					<div class='col-md-12'>
 						<ul>
-							<li><a href="#" title="Dilma">Dilma</a></li>
+							<?= the_terms(get_the_ID(), "tema", '<li>', '', '</li>'); ?>
+							<!-- <li><a href="#" title="Dilma">Dilma</a></li>
 							<li><a href="#" title="Governo">Governo</a></li>
-							<li><a href="#" title="Saúde">Saúde</a></li>
+							<li><a href="#" title="Saúde">Saúde</a></li> -->
 						</ul>
 					</div>
 				</div>
