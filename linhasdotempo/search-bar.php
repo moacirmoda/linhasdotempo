@@ -13,9 +13,6 @@ $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE
 	<div class='container-fluid'>
 		<div class='row'>
 			<div class='col-md-2 logo'>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" class='minilogo'>
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/logo-search.png" title="<?php bloginfo( 'name' ); ?>" width="100px" />
-				</a>
 			</div>
 			
 			<div class='col-md-6 search'>
