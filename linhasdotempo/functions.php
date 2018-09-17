@@ -113,3 +113,14 @@ function get_excerpt_by_id($post_id){
 
     return $the_excerpt;
 }
+
+function acf_load_value_references( $value, $post_id, $field ) {
+
+  if (empty($value)) {
+    global $wpdb;
+    $value = $wpdb->get_var('SELECT meta_value FROM '.$wpdb->prefix.'postmeta WHERE meta_key = "referencias" ORDER BY meta_id DESC LIMIT 1');
+  }
+
+  return $value;
+}
+add_filter('acf/load_value/name=referencias', 'acf_load_value_references', 10, 3);
