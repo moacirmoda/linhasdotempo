@@ -31,7 +31,9 @@ $lt_posts = array();
         ?>
           <div class="project-card">
             <span class="date"><?php echo date_parse(get_post_meta(get_the_ID(), 'data_inicio', true))['year'] ?></span>
-            <h2><?php the_title(); ?></h2>
+            <h2>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h2>
             <p><?php the_excerpt(); ?></p>
           </div>
         <?php
