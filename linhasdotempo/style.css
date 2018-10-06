@@ -477,3 +477,21 @@ footer h2 {
     background-color: #db9f3d;
     border-color: #DB9F58;
 }
+.projects {
+  padding: 1em;
+}
+.project-card {
+  padding: 1em;
+  background-color: #f0f0f0;
+  margin-bottom: 10px;
+}
+.project-card h2 {
+  color: #a16f18;
+  margin: 0;
+}
+.project-card .date {
+  top: 6px;
+  font-size: 10pt;
+  color: #a16f18;
+  font-weight: bold;
+}
