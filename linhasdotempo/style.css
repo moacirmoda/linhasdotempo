@@ -485,7 +485,7 @@ footer h2 {
   background-color: #f0f0f0;
   margin-bottom: 10px;
 }
-.project-card h2 {
+.project-card h2, .project-card h2 a {
   color: #a16f18;
   margin: 0;
 }
