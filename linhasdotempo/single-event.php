@@ -50,9 +50,6 @@ global $post;
 					<div class='col-md-12'>
 						<ul>
 							<?= the_terms(get_the_ID(), "tema", '<li>', '', '</li>'); ?>
-							<!-- <li><a href="#" title="Dilma">Dilma</a></li>
-							<li><a href="#" title="Governo">Governo</a></li>
-							<li><a href="#" title="Saúde">Saúde</a></li> -->
 						</ul>
 					</div>
 				</div>
@@ -76,8 +73,6 @@ global $post;
 								<?php foreach($children as $child): ?>
 									<li><a href="<?= get_permalink($child->ID); ?>" title="<?= $child->post_title; ?>"><?= print_date_shortformat(get_field('data_inicio', $child->ID)); ?> - <?= $child->post_title; ?></a></li>
 								<?php endforeach; ?>
-								<!-- <li><a href="#" title="Dilma">25/05/2015 - Criação do aplicativo Linhas do Tempo</a></li>
-								<li><a href="#" title="Dilma">26/05/2015 - Criação do programa ProUNI</a></li> -->
 							</ul>
 						</div>
 					</div>
@@ -133,10 +128,7 @@ global $post;
 					<div class='row'>
 						<div class='col-md-12'>
 							<h2>Projeto</h2>
-							<?php the_field('projeto'); ?>
-							<?php if(get_field('sub_projeto')): ?>
-								/ <?php the_field('sub_projeto'); ?>
-							<?php endif; ?>
+							<a href="<?php echo get_the_permalink(get_field('projeto')[0]->ID); ?>"><?php echo get_field('projeto')[0]->post_title; ?></a>
 						</div>
 					</div>
 				</div>
