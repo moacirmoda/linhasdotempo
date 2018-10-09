@@ -172,22 +172,29 @@ global $post;
             $lt_posts = array();
           ?>
     
-          <?php foreach($years as $year): $lt_posts[$year] = array(); ?>
-            <?php
+          <?php foreach($years as $year):
+              $lt_posts[$year] = array(); 
 
-              $str_querypost = "post_type=event&post_parent=0&posts_per_page=-1&orderby=date";
-              if(isset($_REQUEST['lt-year'])) {
+              $str_querypost = array(
+                'post_type' => 'event',
+                'post_parent' => 0,
+                'posts_per_page' => -1,
+                'orderby' => 'date',
+                'meta_key' => 'projeto',
+                'meta_value' => serialize(array('' . get_the_ID()))
+              );
 
-                $lt_year = (int)$_REQUEST['lt-year'];
-                $str_querypost .= "&year=" . $lt_year;
-              } else {
-                $str_querypost .= "&year=" . $year;
-              }
-
+              // if(isset($_REQUEST['lt-year'])) {
+              //   $lt_year = (int)$_REQUEST['lt-year'];
+              //   $str_querypost["year"] = $lt_year;
+              // } else {
+              //   $str_querypost["year"] = $year;
+              // }
+              
               if(isset($_REQUEST['lt-order']) and $_REQUEST['lt-order'] == 'desc') {
-                $str_querypost .= "&order=desc";
+                $str_querypost['order'] = "desc";
               } else {
-                $str_querypost .= "&order=asc";
+                $str_querypost['order'] = "asc";
               }
 
               foreach(get_posts($str_querypost) as $post) {
@@ -198,7 +205,6 @@ global $post;
                 }
               }
 
-            // var_dump($lt_posts);
             ?>
           <?php endforeach; ?>
             
