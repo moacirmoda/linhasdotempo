@@ -8,7 +8,7 @@ $query = new WP_Query($query_string);
 if(isset($_GET['s']) and isset($_GET['type']) and $_GET['type'] == 'advanced') {
 	
 	$args = array(
-	    'post_type' => 'event', 
+	    // 'post_type' => 'event', 
 	    'post_status' => 'publish',
 	);
 

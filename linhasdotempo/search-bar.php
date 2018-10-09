@@ -17,7 +17,7 @@ $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE
 			
 			<div class='col-md-6 search'>
 				<form action="<?php bloginfo('siteurl'); ?>" action="GET">
-				<input type="hidden" name="post_type" value="event" />
+				<!-- <input type="hidden" name="post_type" value="event" /> -->
 					<input type="text" placeholder='Buscar' name='s'>
 				</form>
 			</div>
