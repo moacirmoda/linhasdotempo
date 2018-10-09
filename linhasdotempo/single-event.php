@@ -123,7 +123,7 @@ global $post;
 				</div>
 			<?php endif; ?>
 
-			<?php if(get_field('projeto')): ?>
+			<?php if(get_field('projeto')[0]): ?>
 				<div class='comentarios-box'>
 					<div class='row'>
 						<div class='col-md-12'>
