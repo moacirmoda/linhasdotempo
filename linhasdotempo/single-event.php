@@ -127,8 +127,8 @@ global $post;
 				<div class='comentarios-box'>
 					<div class='row'>
 						<div class='col-md-12'>
-							<h2>Projeto</h2>
-							<a href="<?php echo get_the_permalink(get_field('projeto')[0]->ID); ?>"><?php echo get_field('projeto')[0]->post_title; ?></a>
+              <h2>Projeto</h2>
+							<a href="<?php echo get_the_permalink(get_field('projeto')[0]); ?>"><?php echo get_the_title(get_field('projeto')[0]); ?></a>
 						</div>
 					</div>
 				</div>
