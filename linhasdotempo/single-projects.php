@@ -11,14 +11,15 @@ global $post;
 		<div class='container-fluid'>
 
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
+          <div style="text-align: center; background-color: rgba(232, 236, 241, 0.6); padding: 10px;">
           <?php if($post->post_parent): ?>
             <?php $parent = get_post($post->post_parent); ?>
 
             <div class='parent-box'>
               <div class='row'>
                 <div class='col-md-12'>
-                  <a href="<?= get_permalink($parent->ID); ?>" title="<?= $parent->post_title; ?>"><b>EVENTO PRINCIPAL:</b> <?= $parent->post_title; ?></a>
+                  <a href="<?= get_permalink($parent->ID); ?>" title="<?= $parent->post_title; ?>"><b>PROJETO PRINCIPAL:</b> <?= $parent->post_title; ?></a>
                 </div>
               </div>
             </div>
@@ -151,8 +152,10 @@ global $post;
             </div>
           </div>
 
+        </div>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-6">
+        <div style="padding: 10px;">
         <section id="cd-timeline" class="cd-container">
           <?php
             global $post;
@@ -258,6 +261,7 @@ global $post;
 
           <?php endforeach; ?>
         </section> <!-- cd-timeline -->
+        </div>
       </div>
 
 		</div>				
