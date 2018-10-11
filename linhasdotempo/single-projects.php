@@ -11,7 +11,7 @@ global $post;
 		<div class='container-fluid'>
 
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5">
           <div style="text-align: center; background-color: rgba(232, 236, 241, 0.6); padding: 10px;">
           <?php if($post->post_parent): ?>
             <?php $parent = get_post($post->post_parent); ?>
@@ -154,7 +154,7 @@ global $post;
 
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-7">
         <div style="padding: 10px;">
         <section id="cd-timeline" class="cd-container">
           <?php
