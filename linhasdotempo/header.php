@@ -29,9 +29,11 @@
 							<img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/logo-header.png" title="<?php bloginfo( 'name' ); ?>" width='40%' />
 						</a>
 					</div>
-					<div class='col-md-3'>
-						<a href="#" class='sub-logo' title="<?php bloginfo( 'description' ); ?>">
-							<img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/sublogo-header.png" title="<?php bloginfo( 'description' ); ?>" width='70%'/>
+					<div class='col-md-3' style="padding-top: 20px;">
+            <a href="#" class='sub-logo' title="<?php bloginfo( 'description' ); ?>">
+              História da Atenção
+              <br />
+              Primária da Saúde
 						</a>
 					</div>
 					<div class='col-md-3'></div>

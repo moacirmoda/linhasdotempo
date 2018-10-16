@@ -495,3 +495,17 @@ footer h2 {
   color: #a16f18;
   font-weight: bold;
 }
+.sub-logo {
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #d25355;
+  -webkit-text-stroke: 0.5px #7d3d40;
+}
+
+.sub-logo:hover {
+  color: #d25355;
+  -webkit-text-stroke: 0.5px #7d3d40;
+  text-transform: uppercase;
+  text-decoration: none;
+}
