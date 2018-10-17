@@ -496,34 +496,35 @@ footer h2 {
   font-weight: bold;
 }
 
-.main-logo {
-  text-align: center;
-  justify-content: center;
-}
 .main-logo span {
-  line-height: 0.5;
+  line-height: 0.6;
+  font-family: 'Charter Roman';
+}
+.main-logo span:hover {
+  text-transform: uppercase;
+  text-decoration: none;
 }
 .main-logo span:first-child {
   font-size: 20px;
   margin-right: 5px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #d25355;
-  -webkit-text-stroke: 0.5px #7d3d40;
+  color: #a2743a;
+  -webkit-text-stroke: 0.5px #6e532d;
 }
 .main-logo span:not(:first-child):not(:last-child) {
-  font-size: 10px;
+  font-size: 15px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #d25355;
-  -webkit-text-stroke: 0.5px #7d3d40;
+  color: #a2743a;
+  -webkit-text-stroke: 0.5px #6e532d;
 }
 .main-logo span:last-child {
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #d25355;
-  -webkit-text-stroke: 0.5px #7d3d40;
+  color: #dfa656;
+  -webkit-text-stroke: 0.5px #876839;
 }
 
 .sub-logo {
