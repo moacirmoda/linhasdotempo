@@ -495,8 +495,38 @@ footer h2 {
   color: #a16f18;
   font-weight: bold;
 }
+
+.main-logo {
+  text-align: center;
+  justify-content: center;
+}
+.main-logo span {
+  line-height: 0.5;
+}
+.main-logo span:first-child {
+  font-size: 20px;
+  margin-right: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #d25355;
+  -webkit-text-stroke: 0.5px #7d3d40;
+}
+.main-logo span:not(:first-child):not(:last-child) {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #d25355;
+  -webkit-text-stroke: 0.5px #7d3d40;
+}
+.main-logo span:last-child {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #d25355;
+  -webkit-text-stroke: 0.5px #7d3d40;
+}
+
 .sub-logo {
-  margin-top: 5px;
   text-transform: uppercase;
   font-weight: 600;
   color: #d25355;

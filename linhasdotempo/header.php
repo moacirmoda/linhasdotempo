@@ -24,11 +24,14 @@
 		<div class='main-header'>
 			<div class='container-fluid'>
 				<div class='row first'>
-					<div class='col-md-3'>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='main-logo' title="<?php bloginfo( 'name' ); ?>">
-							<img src="<?php bloginfo('stylesheet_directory'); ?>/static/img/logo-header.png" title="<?php bloginfo( 'name' ); ?>" width='40%' />
+					<div class='col-md-2' style="padding-top: 20px; text-align: center;">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class='main-logo' title="<?php bloginfo( 'name' ); ?>">
+              <span>Linhas</span><span>do</span>
+              <br />
+              <span>Tempo</span>
 						</a>
-					</div>
+          </div>
+					<div class='col-md-1'></div>
 					<div class='col-md-3' style="padding-top: 20px;">
             <a href="#" class='sub-logo' title="<?php bloginfo( 'description' ); ?>">
               História da Atenção
