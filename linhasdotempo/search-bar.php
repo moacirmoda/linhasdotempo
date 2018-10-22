@@ -12,35 +12,42 @@ $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE
 <div class='search-bar'>
 	<div class='container-fluid'>
 		<div class='row'>
-			<div class='col-md-2 logo'>
-			</div>
-			
-			<div class='col-md-6 search'>
-				<form action="<?php bloginfo('siteurl'); ?>" action="GET">
-				<!-- <input type="hidden" name="post_type" value="event" /> -->
-					<input type="text" placeholder='Buscar' name='s'>
-				</form>
-			</div>
-			
-			<div class='col-md-2 visao'>
-				<select class='submit-on-change' data-form-name="formSearchBar" data-field-name='lt-order'>
-					<option value='asc' <?php if($_REQUEST['lt-order'] != 'desc') echo 'selected="true"'; ?>>Ascendente</option>
-					<option value='desc' <?php if($_REQUEST['lt-order'] == 'desc') echo 'selected="true"'; ?>>Descendente</option>
-				</select>
-			</div>
+      
+      <form action="<?php bloginfo('siteurl'); ?>" action="GET" id="searchWP">
+        <div class='col-md-6 search'>
+          <!-- <input type="hidden" name="post_type" value="event" /> -->
+          <input type="text" placeholder='Buscar' name='s'>
+        </div>
+        <div class='col-md-2'>
+          <div class='radio'>
+            <label style='padding-top: 10px;'>
+              <input name='searchIAHX' type='radio' value='false' style='width: 12px; margin-top: 20px;' checked /> Pesquisar na BVS
+            </label>
+          </div>
+        </div>
+        <div class='col-md-2'>
+          <label>
+            <input name='searchIAHX' type='radio' value='true' style='width: 12px; margin-top: 20px;' /> Pesquisar no iAHx
+          </label>
+        </div>
+        <div class='col-md-2'>
+          <button type='submit' class='btn btn-lg' style='background-color: #cdb995; margin-top: 2px;'>Pesquisar</button>
+        </div>
+      </form>
+      <form action="http://pesquisa.bvsalud.org/enfermeria/" method="get" target="_blank" id="searchiHAxForm" style="display: none;">
+        <input type="hidden" name="output" value="site" />
+        <input type="hidden" name="lang" value="pt" />
+        <input type="hidden" name="from" value="0" />
+        <input type="hidden" name="sort" value="" />
+        <input type="hidden" name="format" value="summary" />
+        <input type="hidden" name="count" value="20" />
+        <input type="hidden" name="fb" value="" />
+        <input type="hidden" name="page" value="1" />
+        <input type="hidden" name="search_form_submit" value="Pesquisar" />
+        <input type="hidden" name="index" value="tw" />
+        <input type="hidden" name="q" value="" />
+      </form>
 
-			<div class='col-md-2 ano'>
-				<select class='submit-on-change' data-form-name="formSearchBar" data-field-name='lt-year'>
-					<option value="">Ano:</option>
-					<?php foreach($years as $year): ?>
-						<?php if(isset($_REQUEST['lt-year']) and $_REQUEST['lt-year'] == $year->year): ?>
-							<option selected><?= $year->year; ?></option>
-						<?php else: ?>
-							<option ><?= $year->year; ?></option>
-						<?php endif; ?>
-					<?php endforeach; ?>
-				</select>
-			</div>
 		</div>
 	</div>
 </div>
