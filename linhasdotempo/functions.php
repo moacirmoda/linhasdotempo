@@ -124,3 +124,45 @@ function acf_load_value_references( $value, $post_id, $field ) {
   return $value;
 }
 add_filter('acf/load_value/name=referencias', 'acf_load_value_references', 10, 3);
+
+add_action( 'admin_init', 'bvs_settings' );
+function bvs_settings(){
+
+  register_setting(
+    'general',
+    'ihax_url',
+    'sanitize_settings'
+  );
+  add_settings_section(
+    'bvs_settings',
+    'Configurações da BVS',
+    'bvs_settings_section_description',
+    'general'
+  );
+  add_settings_field(
+    'ihax_url',
+    'iHAx URL',
+    'bvs_settings_ihax_url_field_callback',
+    'general',
+    'bvs_settings'
+  );
+
+  add_option('ihax_url', 'http://pesquisa.bvsalud.org/enfermeria/');
+}
+
+function bvs_settings_ihax_url_field_callback() {
+  ?>
+  <label for="ihax_url">
+    URL de busca do iHAx
+  </label>
+  <input id="ihax_url" type="text" value="<?php echo get_option( 'ihax_url') ?>" name="ihax_url">
+  <?php
+}
+
+function sanitize_settings( $input ) {
+  return $input;
+}
+
+function bvs_settings_section_description() {
+  echo wpautop( "Configurações da BVS" );
+}

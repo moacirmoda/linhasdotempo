@@ -34,7 +34,7 @@ $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM wp_posts WHERE
           <button type='submit' class='btn btn-lg' style='background-color: #cdb995; margin-top: 2px;'>Pesquisar</button>
         </div>
       </form>
-      <form action="http://pesquisa.bvsalud.org/enfermeria/" method="get" target="_blank" id="searchiHAxForm" style="display: none;">
+      <form action="<?php echo get_option('ihax_url') ?>" method="get" target="_blank" id="searchiHAxForm" style="display: none;">
         <input type="hidden" name="output" value="site" />
         <input type="hidden" name="lang" value="pt" />
         <input type="hidden" name="from" value="0" />
